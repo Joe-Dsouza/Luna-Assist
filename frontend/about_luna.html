@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUNA - About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="start.html"><img src="logo.jpeg" alt=""></a>
+        <div class="nav-links">
+            <p class="nav-bar link"><a href="home.html">Home</a></p>
+            <p class="nav-bar link"><a href="How_it_works.html">How it Works</a></p>
+            <p class="nav-bar link"><a href="Help_support.html">Help & Support</a></p>
+            <p class="nav-bar link"><a href="about_luna.html">About Luna</a></p>
+        </div>
+    </nav>
+    <h1 class="heading">About LUNA Assist</h1>
+    <div class="content">
+        <p>LUNA Assist is an advanced AI-powered virtual assistant designed to provide seamless voice interaction, automation, and real-time assistance for users. It enhances productivity, simplifies daily tasks, and delivers personalized recommendations.</p>
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Voice Commands:</strong> Control your devices and applications using voice.</li>
+            <li><strong>Smart Assistance:</strong> Get real-time updates on weather, news, and reminders.</li>
+            <li><strong>Multimodal Capabilities:</strong> Uses text, voice, and camera for interaction.</li>
+            <li><strong>AI-Powered Personalization:</strong> Adapts to your preferences for a tailored experience.</li>
+        </ul>
+        <h2>Why Choose LUNA Assist?</h2>
+        <p>LUNA Assist is designed with user convenience in mind, offering a blend of AI intelligence and intuitive user experience. Whether you need help managing tasks, entertainment, or information retrieval, LUNA Assist is here to assist you effortlessly.</p>
+    </div>
+    <script>
+        // Function to generate random stars
+        function generateStars(numStars) {
+            const body = document.body;
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Random position for the star
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * window.innerHeight;
+                
+                // Random duration and delay for blinking
+                const duration = Math.random() * 2 + 1; // between 1s and 3s
+                const delay = Math.random() * 2; // between 0s and 2s
+
+                star.style.left = `${x}px`;
+                star.style.top = `${y}px`;
+                star.style.animationDuration = `${duration}s`;
+                star.style.animationDelay = `${delay}s`;
+
+                // Append the star to the body
+                body.appendChild(star);
+            }
+        }
+
+        // Call the function to generate 200 stars
+        generateStars(200);
+    </script>
+</body>
+</html>

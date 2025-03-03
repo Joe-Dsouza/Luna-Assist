@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - LUNA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="start.html"><img src="logo.jpeg" alt="LUNA Logo"></a>
+        <div class="nav-links">
+            <p class="nav-bar link"><a href="home.html">Home</a></p>
+            <p class="nav-bar link"><a href="how_it_works.html">How it Works</a></p>
+            <p class="nav-bar link"><a href="help_support.html">Help & Support</a></p>
+            <p class="nav-bar link"><a href="about_luna.html">About Luna</a></p>
+        </div>
+    </nav>
+    <h1 class="heading">How LUNA Assist Works</h1>
+    <div class="content">
+        <p>LUNA Assist is an AI-powered virtual assistant designed to enhance user experience with advanced voice interaction, automation, and intelligence.</p>
+        <h2>Key Features:</h2>
+        <ul>
+            <li>Voice-activated commands with a simple click on the mic icon.</li>
+            <li>Smart processing to understand and execute user instructions.</li>
+            <li>Integration with various applications and services.</li>
+            <li>Real-time analysis of environment and user reactions.</li>
+        </ul>
+        <h2>How to Use:</h2>
+        <ol>
+            <li>Click the microphone icon to activate LUNA Assist.</li>
+            <li>Speak your command clearly, such as "Open Spotify" or "Check Weather".</li>
+            <li>LUNA Assist processes your request and executes the necessary action.</li>
+        </ol>
+        <p>Enjoy a seamless and interactive experience with LUNA Assist, making tasks easier and more efficient.</p>
+    </div>
+    <script>
+        // Function to generate random stars
+        function generateStars(numStars) {
+            const body = document.body;
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Random position for the star
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * window.innerHeight;
+                
+                // Random duration and delay for blinking
+                const duration = Math.random() * 2 + 1; // between 1s and 3s
+                const delay = Math.random() * 2; // between 0s and 2s
+
+                star.style.left = `${x}px`;
+                star.style.top = `${y}px`;
+                star.style.animationDuration = `${duration}s`;
+                star.style.animationDelay = `${delay}s`;
+
+                // Append the star to the body
+                body.appendChild(star);
+            }
+        }
+
+        // Call the function to generate 200 stars
+        generateStars(200);
+    </script>
+</body>
+</html>

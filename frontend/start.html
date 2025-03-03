@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUNA</title>
+  <style>
+    /* Set the body to have a black background */
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: black;
+      overflow: hidden;
+      position: relative;
+      
+    }
+
+    /* Styling for the stars */
+    .star {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      width: 2px;
+      height: 2px;
+      animation: blink 1.5s infinite alternate;
+      display: flex;
+    }
+
+    /* Keyframes for the blinking effect */
+    @keyframes blink {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    /* Styling for the moon */
+    .moon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: #f0f8ff;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+      animation: glowing 2s infinite alternate;
+      overflow: hidden;
+    }
+
+    /* Glowing animation for the moon */
+    @keyframes glowing {
+      0% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+      }
+      100% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    /* Styling for the craters */
+    .crater {
+      position: absolute;
+      background-color: #333;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: craterAnimation 5s infinite alternate;
+    }
+   
+    /* Animation for craters (movement effect) */
+    @keyframes craterAnimation {
+      0% {
+        transform: scale(1) translate(0, 0);
+      }
+      100% {
+        transform: scale(0.8) translate(5px, 5px);
+      }
+    }
+    .heading{
+      font-size:300%;
+      padding-top: 10%;
+      color: white;
+      text-align: center;
+      text-shadow: 0 0 5px #b4adad, 0 0 5px #6d6767, 0 0 5px #938f8f;
+     
+    }
+    .startbutton{
+      color: #f0f8ff;
+      font-size: 10%;
+      text-align: center;
+      text-shadow: 0 0 5px #b4adad, 0 0 10px #6d6767, 0 0 10px #938f8f;
+     
+    }
+    button{
+      border-radius:20%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- The moon element with craters inside it -->
+  <div class="moon">
+    <div class="crater" style="width: 20px; height: 20px; top: 25px; left: 30px;"></div>
+    <div class="crater" style="width: 15px; height: 15px; top: 50px; left: 60px;"></div>
+    <div class="crater" style="width: 18px; height: 18px; top: 35px; left: 70px;"></div>
+    <div class="crater" style="width: 12px; height: 12px; top: 55px; left: 40px;"></div>
+  </div>
+
+  
+  <div class="heading">
+      <h1>LUNA ASSIST</h1>
+  </div>
+  <div class="startbutton">
+   <a href="home.html"> <button><h3> GET STARTED</h3></button></a>
+  </div>
+
+  <script>
+    // Function to generate random stars
+    function generateStars(numStars) {
+      const body = document.body;
+
+      for (let i = 0; i < numStars; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        
+        // Random position for the star
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        
+        // Random duration and delay for blinking
+        const duration = Math.random() * 2 + 1; // between 1s and 3s
+        const delay = Math.random() * 2; // between 0s and 2s
+
+        star.style.left = `${x}px`;
+        star.style.top = `${y}px`;
+        star.style.animationDuration = `${duration}s`;
+        star.style.animationDelay = `${delay}s`;
+
+        // Append the star to the body
+        body.appendChild(star);
+      }
+    }
+
+    // Call the function to generate 200 stars
+    generateStars(200);
+  </script>
+</body>
+</html>

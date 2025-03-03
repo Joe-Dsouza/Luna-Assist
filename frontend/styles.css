@@ -1,0 +1,180 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(0, 0, 0);
+}
+
+.heading{
+    font-size: 550%;
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+    display: block;
+}
+.content{
+    color: white;
+    font-size: 150%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: auto;
+}
+/* Ensure the navbar stays responsive */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(195, 199, 199);
+    border-radius: 20px;
+    padding: 10px 15px;
+    box-shadow: rgba(18, 17, 17, 0.15) 0px 15px 25px, rgba(29, 1, 1, 0.05) 0px 5px 10px;
+    flex-wrap: wrap;
+}
+
+/* Adjust nav-links to fit inside the nav-bar */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Ensure the links are inside the navbar */
+.nav-links a {
+    text-decoration: none;
+    color: #141414;
+    padding: 5px 10px;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Responsive styling for small screens */
+@media only screen and (max-width: 600px) {
+    .nav-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-links a {
+        display: block;
+    }
+}
+
+
+
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: #111111;
+}
+
+@media only screen and (max-width: 500px) {
+    .nav-links {
+        display: none;
+    }
+    .heading {
+        font-size: 400%;
+    }
+}
+
+img {
+    height: 50px;
+    width: 100px;
+    border-radius: 40px;
+}
+
+.mic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mic {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, cyan, blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    box-shadow: 0 0 20px cyan;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mic img {
+    width: 100px;
+    height: 100px;
+}
+
+.mic:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 30px cyan;
+}
+
+.mic:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 40px cyan;
+}
+#chat-box {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+
+/* Styling for the stars */
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    animation: blink 1.5s infinite alternate;
+    display: flex;
+}
+
+/* Keyframes for the blinking effect */
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Styling for the craters */
+.crater {
+    position: absolute;
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: craterAnimation 5s infinite alternate;
+}
+
+/* Animation for craters (movement effect) */
+@keyframes craterAnimation {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+    100% {
+        transform: scale(0.8) translate(5px, 5px);
+    }
+}
