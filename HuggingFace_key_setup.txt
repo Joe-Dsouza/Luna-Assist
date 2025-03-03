@@ -1,0 +1,48 @@
+# Config File Setup for LUNA Assist
+
+## 📌 Purpose of `config.py`
+The `config.py` file is used to store API keys and configuration settings needed for LUNA Assist to function properly. The most important setting here is the Hugging Face API key, which is required for AI-generated responses.
+
+---
+
+## 🚀 How to Set Up the Hugging Face API Key
+
+### **1️⃣ Create a Hugging Face Account**
+- Visit [Hugging Face](https://huggingface.co/).
+- Click **Sign Up** to create an account or **Log In** if you already have one.
+
+### **2️⃣ Generate an API Token**
+- After logging in, go to **Settings** > **Access Tokens**.
+- Click **New Token**.
+- Choose the scope as **Read**.
+- Click **Generate Token**.
+- Copy the generated token.
+
+### **3️⃣ Add the API Token to `config.py`**
+- Open `config.py` in any text editor.
+- Replace `your_huggingface_api_key_here` with the token you copied.
+
+Example:
+```python
+HUGGING_FACE_API_URL = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill"
+HUGGING_FACE_API_TOKEN = "hf_youractualapikey"  # Replace with your actual API token
+headers = {"Authorization": f"Bearer {HUGGING_FACE_API_TOKEN}"}
+```
+
+---
+
+## 📌 Why is This API Key Required?
+- The Hugging Face API allows LUNA Assist to process **natural language queries** and generate intelligent responses.
+- Without this key, LUNA won't be able to fetch AI-generated replies.
+
+---
+
+## ❗ Important Notes
+- Keep your API key **private** and **do not share it**.
+- If your key gets exposed, **revoke it** in Hugging Face settings and generate a new one.
+- Free-tier tokens may have usage limits; consider upgrading if needed.
+
+---
+
+Now you’re all set to use LUNA Assist with AI-powered responses! 🎤🚀
+
