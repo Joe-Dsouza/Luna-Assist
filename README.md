@@ -76,6 +76,11 @@ Open `start.html` in a browser. Click the mic button to start interaction with L
 
 ---
 
+![Screenshot 2025-03-02 150518](https://github.com/user-attachments/assets/39beef94-1681-46c1-bab7-e6b82c41aaaa)
+
+---
+
+
 - Developed by Josfer Dsouza
 
 
